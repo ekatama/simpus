@@ -1,3 +1,7 @@
+<?php
+	$parent='layananpemustaka';
+	$halaman='uploadrepository';
+?>
 <!doctype html>
 <html lang="en">
 

@@ -1,3 +1,7 @@
+<?php
+	$parent='dashboard';
+	$halaman='dashboard';
+?>
 <!doctype html>
 <html lang="en">
 

@@ -3,6 +3,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
+	function __construct(){
+	parent::__construct();
+	// cek login
+					//
+	        // parent::__construct();
+	        //  if(!$this->is_logged_in()):
+	        //  redirect(base_url()."login.php");
+					//
+					//
+	if($this->session->userdata('status') != "login"){
+		redirect(base_url().'welcome?pesan=belumlogin');
+	}
+}
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -35,6 +49,6 @@ class Admin extends CI_Controller {
 		$this->load->view('pembuatankta_edit',$data);
 	}
 
-	
+
 
 }

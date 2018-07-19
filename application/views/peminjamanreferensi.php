@@ -1,3 +1,7 @@
+<?php
+	$parent='layananpemustaka';
+	$halaman='peminjamanreferensi';
+?>
 <!doctype html>
 <html lang="en">
 

@@ -1,3 +1,7 @@
+<?php
+	$parent='cekdenda';
+	$halaman='cekdenda';
+?>
 <!doctype html>
 <html lang="en">
 

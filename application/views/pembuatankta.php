@@ -1,3 +1,7 @@
+<?php
+	$parent='layananpemustaka';
+	$halaman='pembuatankta';
+?>
 <!doctype html>
 <html lang="en">
 

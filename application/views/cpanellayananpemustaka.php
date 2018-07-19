@@ -43,12 +43,12 @@ include "head.php";
 												<tbody>
 													<tr>
 														<td>Sirkulasi</td>
-														<td><button type="button" class="btn btn-default">Edit</button></td>
+														<td><a href="<?php echo site_url('admin/pembuatankta_edit/')?>"><button type="button" class="btn btn-default">Edit</button></a></td>
 													</tr>
 
 													<tr>
 														<td>Pembuatan KTA</td>
-														<td><button type="button" class="btn btn-default">Edit</button></td>
+														<td><a href="<?php echo site_url('admin/pembuatankta_edit/')?>" class="btn btn-default">Edit</a></td>
 													</tr>
 
 													<tr>
@@ -60,7 +60,7 @@ include "head.php";
 														<td>Peminjaman Koleksi Referensi</td>
 														<td><button type="button" class="btn btn-default">Edit</button></td>
 													</tr>
-													
+
 													<tr>
 														<td>Upload Repository</td>
 														<td><button type="button" class="btn btn-default">Edit</button></td>
