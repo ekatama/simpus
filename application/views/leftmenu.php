@@ -2,137 +2,44 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<?php
-								if($halaman=='dashboard'){
-						?>
-									<li><a href="<?php echo base_url(); ?>" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<?php
-								}
-						else {
-						?>
 
-								<li><a href="<?php echo base_url(); ?>" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-
-						<?php
-							}
-						?>
-						
-
-						<?php
-							if($parent=='layananpemustaka'){
-						?>
-						
-						<li>
+					<?php 
 					
-					<a href="#subPages" data-toggle="collapse" class="active"><i class="lnr lnr-database"></i> <span>Layanan Pemustaka</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-					<div id="subPages" class="collapse in">
+					if($this->session->userdata('userdata') == 'admin'):
+
+					?>
+
+
+					<?php else: ?>
+					
+					<li>
+					<a <?php if($halaman == "dashboard") echo "class='active'"; ?> href="<?php echo base_url(); ?>">
+					<i class="lnr lnr-home"></i> <span>Dashboard</span></a>
+					</li>
+
+
+					<li>
+					
+					<a <?php if($parent == "layananpemustaka") echo "class='active'"; ?> href="#subPages" data-toggle="collapse"><i class="lnr lnr-database"></i> <span>Layanan Pemustaka</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+					<div id="subPages" <?php if($parent == "layananpemustaka"): echo "class='collapse in'"; ?><?php elseif($parent != "layananpemustaka"): echo "class='collapse'"; ?><?php endif ?>>
 						<ul class="nav">
-							<?php
-								if($halaman=='sirkulasi'){
-							?>
-								<li><a href="<?php echo base_url(); ?>tatacara/sirkulasi" class="active">Sirkulasi</a></li>
-							<?php
-								}
-								else {
-							?>
 
-								<li><a href="<?php echo base_url(); ?>tatacara/sirkulasi" class="">Sirkulasi</a></li>
-							<?php
-								}
-							?>
-
-
-
-							<?php
-								if($halaman=='pembuatankta'){
-							?>
-								<li><a href="<?php echo base_url(); ?>tatacara/pembuatankta" class="active">Pembuatan KTA</a></li>
-							<?php
-								}
-								else {
-							?>
-
-								<li><a href="<?php echo base_url(); ?>tatacara/pembuatankta" class="">Pembuatan KTA</a></li>
-							<?php
-								}
-							?>
-
-
-
-							<?php
-								if($halaman=='pembuatanbebaspustaka'){
-							?>
-								<li><a href="<?php echo base_url(); ?>tatacara/pembuatanbebaspustaka" class="active">Pembuatan Bebas Pustaka</a></li>
-							<?php
-								}
-								else {
-							?>
-
-								<li><a href="<?php echo base_url(); ?>tatacara/pembuatanbebaspustaka" class="">Pembuatan Bebas Pustaka</a></li>
-							<?php
-								}
-							?>
-
-
-
-							<?php
-								if($halaman=='peminjamanreferensi'){
-							?>
-								<li><a href="<?php echo base_url(); ?>tatacara/peminjamanreferensi" class="active">Peminjaman Koleksi Referensi</a></li>
-							<?php
-								}
-								else {
-							?>
-
-								<li><a href="<?php echo base_url(); ?>tatacara/peminjamanreferensi" class="">Peminjaman Koleksi Referensi</a></li>
-							<?php
-								}
-							?>
-							
-
-							
-							<?php
-								if($halaman=='uploadrepository'){
-							?>
-								<li><a href="<?php echo base_url(); ?>tatacara/uploadrepository" class="active">Upload Repository</a></li>
-							<?php
-								}
-								else {
-							?>
-
-								<li><a href="<?php echo base_url(); ?>tatacara/uploadrepository" class="">Upload Repository</a></li>
-							<?php
-								}
-							?>
-							
+						<li><a <?php if($halaman == "sirkulasi") echo "class='active'"; ?> href="<?php echo base_url(); ?>tatacara/sirkulasi">Sirkulasi</a></li>
+						<li><a <?php if($halaman == "pembuatankta") echo "class='active'"; ?> href="<?php echo base_url(); ?>tatacara/pembuatankta">Pembuatan KTA</a></li>
+						<li><a <?php if($halaman == "pembuatanbebaspustaka") echo "class='active'"; ?> href="<?php echo base_url(); ?>tatacara/pembuatanbebaspustaka">Pembuatan Bebas Pustaka</a></li>
+						<li><a <?php if($halaman == "peminjamanreferensi") echo "class='active'"; ?> href="<?php echo base_url(); ?>tatacara/peminjamanreferensi">Peminjaman Koleksi Referensi</a></li>	
+						<li><a <?php if($halaman == "uploadrepository") echo "class='active'"; ?> href="<?php echo base_url(); ?>tatacara/uploadrepository">Upload Repository</a></li>
 
 						</ul>
 					</div>
-						</li>
 
-						<?php
-							}
-							else{
-						?>
-								
-								<li>
+					</li>
+
 					
-					<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-database"></i> <span>Layanan Pemustaka</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-					<div id="subPages" class="collapse ">
-						<ul class="nav">
-							<li><a href="<?php echo base_url(); ?>tatacara/sirkulasi" class="">Sirkulasi</a></li>
-							<li><a href="<?php echo base_url(); ?>tatacara/pembuatankta" class="">Pembuatan KTA</a></li>
-							<li><a href="<?php echo base_url(); ?>tatacara/pembuatanbebaspustaka" class="">Pembuatan Bebas Pustaka</a></li>
-							<li><a href="<?php echo base_url(); ?>tatacara/peminjamanreferensi" class="">Peminjaman Koleksi Referensi</a></li>
-							<li><a href="<?php echo base_url(); ?>tatacara/uploadrepository" class="">Upload Repository</a></li>
-						</ul>
-					</div>
-				</li>
 
-						<?php
-							}
-						?>
-						
+					<?php endif ?>
+
+					
 
 						<li>
 							<a href="#subPages2" data-toggle="collapse" class="collapsed"><i class="lnr lnr-book"></i> <span>Profil Perpustakaan</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>

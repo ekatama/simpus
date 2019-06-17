@@ -12,9 +12,7 @@ class Admin extends CI_Controller {
 	        //  redirect(base_url()."login.php");
 					//
 					//
-	if($this->session->userdata('status') != "login"){
-		redirect(base_url().'welcome?pesan=belumlogin');
-	}
+	
 }
 
 	/**
