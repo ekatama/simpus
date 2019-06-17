@@ -1,3 +1,7 @@
+<?php
+	$parent='profilperpustakaan';
+	$halaman='sekilas';
+?>
 <!doctype html>
 <html lang="en">
 

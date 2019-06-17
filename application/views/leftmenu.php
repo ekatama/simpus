@@ -41,29 +41,21 @@
 
 					
 
-						<li>
-							<a href="#subPages2" data-toggle="collapse" class="collapsed"><i class="lnr lnr-book"></i> <span>Profil Perpustakaan</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages2" class="collapse ">
+					<li>
+						
+					<a <?php if($parent == "profilperpustakaan") echo "class='active'"; ?> href="#subPages2" data-toggle="collapse"><i class="lnr lnr-book"></i> <span>Profil Perpustakaan</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages2" <?php if($parent == "profilperpustakaan"): echo "class='collapse in'"; ?><?php elseif($parent != "profilperpustakaan"): echo "class='collapse'"; ?><?php endif ?>>
 								<ul class="nav">
-									<li><a href="<?php echo base_url(); ?>profil/sekilas" class="">Sekilas dan Sejarah</a></li>
+									<li><a <?php if($halaman == "sekilas") echo "class='active'"; ?> href="<?php echo base_url(); ?>profil/sekilas">Sekilas dan Sejarah</a></li>
 									<li><a href="<?php echo base_url(); ?>tatacara/pembuatanbebaspustaka" class="">Visi dan Misi</a></li>
 									<li><a href="<?php echo base_url(); ?>tatacara/peminjamanreferensi" class="">Struktur Organisasi</a></li>
 								</ul>
 							</div>
-						</li>
+					</li>
 
-						<?php
-							if($halaman=='cekdenda'){
-						?>
-						<li><a href="<?php echo base_url(); ?>cek/cekdenda" class="active"><i class="lnr lnr-enter"></i> <span>Cek Kartu</span></a></li>
-						<?php
-							}
-							else {
-						?>
-							<li><a href="<?php echo base_url(); ?>cek/cekdenda" class=""><i class="lnr lnr-enter"></i> <span>Cek Kartu</span></a></li>
-						<?php
-							}
-						?>
+
+					<li><a <?php if($halaman == "cekdenda") echo "class='active'"; ?> href="<?php echo base_url(); ?>cek/cekdenda"><i class="lnr lnr-enter"></i> <span>Cek Kartu</span></a></li>
+						
 						<li>
 							
 							<a href="#subPages3" data-toggle="collapse" class="collapsed"><i class="lnr lnr-cog"></i> <span>CPanel</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
