@@ -35,9 +35,6 @@
 
 					</li>
 
-					
-
-					<?php endif ?>
 
 					
 
@@ -56,17 +53,21 @@
 
 					<li><a <?php if($halaman == "cekdenda") echo "class='active'"; ?> href="<?php echo base_url(); ?>cek/cekdenda"><i class="lnr lnr-enter"></i> <span>Cek Kartu</span></a></li>
 						
+
+						
 						<li>
 							
-							<a href="#subPages3" data-toggle="collapse" class="collapsed"><i class="lnr lnr-cog"></i> <span>CPanel</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages3" class="collapse ">
+					<a <?php if($parent == "admin") echo "class='active'"; ?> href="#subPages3" data-toggle="collapse"><i class="lnr lnr-cog"></i> <span>CPanel</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages3" <?php if($parent == "admin"): echo "class='collapse in'"; ?><?php elseif($parent != "admin"): echo "class='collapse'"; ?><?php endif ?>>
 								<ul class="nav">
-									<li><a href="<?php echo base_url(); ?>admin/cpanellayananpemustaka" class="">Layanan Pemustaka</a></li>
+									<li><a <?php if($halaman == "cpanellayananpemustaka") echo "class='active'"; ?> href="<?php echo base_url(); ?>admin/cpanellayananpemustaka">Layanan Pemustaka</a></li>
 									<li><a href="<?php echo base_url(); ?>admin/pembuatankta" class="">Profil Perpustakaan</a></li>
 								</ul>
 							</div>
 
 						</li>
+
+						<?php endif ?>
 
 					</ul>
 				</nav>

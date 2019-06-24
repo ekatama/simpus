@@ -30,8 +30,8 @@ include "head.php";
 
 					<div class="panel panel-headline">
 						<div class="panel-body">
-							<h4><p><b>Form Edit Pembuatan KTA</b></p></h4>
-							<?php foreach($pembuatankta as $m) { ?>
+							<h4><p><b>Form Edit Sirkulasi</b></p></h4>
+							<?php foreach($sirkulasi as $m) { ?>
 								<form class="form-horizontal style-form" method="POST"  action="<?php echo base_url(); ?>admin/pembuatankta_edit_act">
 									<div class="col-md-4">
 									<br>
@@ -39,7 +39,7 @@ include "head.php";
 										<input class="form-control" name="judul_pembuatankta" value="<?php echo $m->judul_pembuatankta;?>" type="text">
 									<br>
 										<label>Deskripsi</label>
-										<textarea class="form-control"  name="deskripsi_pembuatankta" rows="10"><?php echo $m->deskripsi_pembuatankta ?></textarea>
+										<textarea class="form-control"  name="deskripsi_pembuatankta" rows="10" id="comment"><?php echo $m->deskripsi_pembuatankta ?></textarea>
 										<br>	
 										<center><input type="submit" value="SIMPAN" name="simpan" class="btn btn-sm btn-primary"></center>
 									

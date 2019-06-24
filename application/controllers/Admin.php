@@ -47,6 +47,32 @@ class Admin extends CI_Controller {
 		$this->load->view('pembuatankta_edit',$data);
 	}
 
+	public function pembuatankta_edit_act()
+	{
+		$judul_pembuatankta = $this->input->post('judul_pembuatankta');
+		$deskripsi_pembuatankta = $this->input->post('deskripsi_pembuatankta');
+		$this->form_validation->set_rules('judul_pembuatankta','Judul','required');
+		$this->form_validation->set_rules('deskripsi_pembuatankta','Deskripsi','required');
+
+		$where = array(
+			'id_pembuatankta' => '1'		
+		);
+		$data = array(
+			'id_pembuatankta' => '1',
+			'judul_pembuatankta' => $judul_pembuatankta,
+			'deskripsi_pembuatankta' => $deskripsi_pembuatankta,
+		);
+		$this->m_cpanel->update_data($where,$data,'pembuatankta');
+		redirect(base_url().'admin/cpanellayananpemustaka?pesan=sukses_update_kta');
+	}
+
+	public function sirkulasi_edit()
+	{
+
+		$data['sirkulasi'] = $this->m_cpanel->get_data('sirkulasi')->result();
+		$this->load->view('sirkulasi_edit',$data);
+	}
+
 
 
 }

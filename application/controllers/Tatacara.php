@@ -20,7 +20,8 @@ class Tatacara extends CI_Controller {
 	 */
 	public function pembuatankta()
 	{
-		$this->load->view('pembuatankta');
+		$data['pembuatankta'] = $this->m_cpanel->get_data('pembuatankta')->result();
+		$this->load->view('pembuatankta',$data);
 	}
 
 	public function sirkulasi()

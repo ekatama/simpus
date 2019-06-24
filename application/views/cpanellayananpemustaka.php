@@ -1,3 +1,7 @@
+<?php
+	$parent='admin';
+	$halaman='cpanellayananpemustaka';
+?>
 <!doctype html>
 <html lang="en">
 
@@ -23,6 +27,14 @@ include "head.php";
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid">
+				<?php
+          if(isset($_GET['pesan'])){
+           	if($_GET['pesan'] == "sukses_update_kta"){
+           		echo "<div class='alert alert-success'>Sukses ubah page pembuatan KTA(Kartu Tanda Anggota).</div>";
+			   }
+			
+           }
+           ?>
 
 					<div class="panel panel-headline">
 						<div class="panel-body">
@@ -43,7 +55,7 @@ include "head.php";
 												<tbody>
 													<tr>
 														<td>Sirkulasi</td>
-														<td><a href="<?php echo site_url('admin/pembuatankta_edit/')?>"><button type="button" class="btn btn-default">Edit</button></a></td>
+														<td><a href="<?php echo site_url('admin/sirkulasi_edit/')?>"><button type="button" class="btn btn-default">Edit</button></a></td>
 													</tr>
 
 													<tr>

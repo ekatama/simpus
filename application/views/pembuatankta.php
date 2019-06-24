@@ -30,11 +30,11 @@ include "head.php";
 					
 					<div class="panel panel-headline">
 						<div class="panel-body">
-							<h4><p><b>Tata Cara Pembuatan Kartu Tanda Anggota (KTA) Pustaka</b></p></h4>
-							<p>1. Slip SPP terbaru</p>
-							<p>2. Mengisi Formulir</p>
-							<p>3. Melakukan foto langusng di tempat</p>
-							<p>4. Menyerahkan biaya administrasi sebesar Rp.5000</p>
+						<?php foreach($pembuatankta as $m) { ?>
+							<h4><p><b>
+							<?php echo $m->judul_pembuatankta;?>
+							</b></p></h4>
+							<textarea class="form-control"  name="deskripsi_pembuatankta" rows="10" readonly><?php echo $m->deskripsi_pembuatankta ?></textarea>
 
 							
 							<br>
@@ -44,6 +44,7 @@ include "head.php";
 							<img src="<?php echo base_url('assets/assets/img/pembuatankta.png')?>">
 							</center>
 							<h5><i>Note : Untuk lebih jelas bisa segera mendatangi petugas Tata Usaha bagian pembuatan KTA di perpustakaan pada jam operasional</i></h5>
+						<?php } ?>
 						</div>
 					</div>
 				</div>
