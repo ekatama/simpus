@@ -69,8 +69,29 @@ class Admin extends CI_Controller {
 	public function sirkulasi_edit()
 	{
 
-		$data['sirkulasi'] = $this->m_cpanel->get_data('sirkulasi')->result();
+		$data['peminjaman'] = $this->db->query("SELECT * FROM sirkulasi where id_sirkulasi='1'")->result();
+		$data['pengembalian'] = $this->db->query("SELECT * FROM sirkulasi where id_sirkulasi='2'")->result();
+		$data['perpanjangan'] = $this->db->query("SELECT * FROM sirkulasi where id_sirkulasi='3'")->result();
 		$this->load->view('sirkulasi_edit',$data);
+	}
+
+	public function sirkulasi_edit_peminjaman_act()
+	{
+		$judul_sirkulasi = $this->input->post('judul_sirkulasi');
+		$deskripsi_sirkulasi = $this->input->post('deskripsi_sirkulasi');
+		$this->form_validation->set_rules('judul_sirkulasi','Judul','required');
+		$this->form_validation->set_rules('deskripsi_sirkulasi','Deskripsi','required');
+
+		$where = array(
+			'id_sirkulasi' => '1'		
+		);
+		$data = array(
+			'id_sirkulasi' => '1',
+			'judul_sirkulasi' => $judul_sirkulasi,
+			'deskripsi_sirkulasi' => $deskripsi_sirkulasi,
+		);
+		$this->m_cpanel->update_data($where,$data,'sirkulasi');
+		redirect(base_url().'admin/cpanellayananpemustaka?pesan=sukses_update_kta');
 	}
 
 

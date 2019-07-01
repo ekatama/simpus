@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 17, 2019 at 11:04 AM
+-- Generation Time: Jul 01, 2019 at 12:03 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -19,6 +19,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `simpus`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `time_admin` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`username`, `password`, `time_admin`, `status`) VALUES
+('admin', 'admin', '2019-06-25 09:03:04', 1);
 
 -- --------------------------------------------------------
 
@@ -46,14 +67,14 @@ CREATE TABLE IF NOT EXISTS `pembuatankta` (
   `deskripsi_pembuatankta` varchar(1000) NOT NULL,
   `gambar_pembuatankta` varchar(255) NOT NULL,
   PRIMARY KEY (`id_pembuatankta`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `pembuatankta`
 --
 
 INSERT INTO `pembuatankta` (`id_pembuatankta`, `judul_pembuatankta`, `deskripsi_pembuatankta`, `gambar_pembuatankta`) VALUES
-(1, 'Tata Cara Pembuatan Kartu Tanda Anggota (KTA) Pustaka', '1. Slip SPP terbaru\n\n2. Mengisi Formulir\n\n3. Melakukan foto langusng di tempat\n\n4. Menyerahkan biaya administrasi sebesar Rp.5000\n', '');
+(1, 'Tata Cara Pembuatan Kartu Tanda Anggota (KTA) Pustaka', '1. Slip SPP terbarua\r\n\r\n2. Mengisi Formulir\r\n\r\n3. Melakukan foto langusng di tempat\r\n\r\n4. Menyerahkan biaya administrasi sebesar Rp.5000\r\n', '');
 
 -- --------------------------------------------------------
 
@@ -81,7 +102,16 @@ CREATE TABLE IF NOT EXISTS `sirkulasi` (
   `deskripsi_sirkulasi` varchar(1000) NOT NULL,
   `gambar_sirkulasi` varchar(255) NOT NULL,
   PRIMARY KEY (`id_sirkulasi`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `sirkulasi`
+--
+
+INSERT INTO `sirkulasi` (`id_sirkulasi`, `judul_sirkulasi`, `deskripsi_sirkulasi`, `gambar_sirkulasi`) VALUES
+(1, 'Tata Cara Peminjaman Koleksi Buku', '1. Meminjam secara mandiri melalui alat peminjaman yang berada di depan meja sirkulasi.\r\n\r\n2. Batas waktu pengembalian selama 7 hari setelah buku dipinjam.\r\n\r\n3. Jumlah buku yang dapat pinjam sebanyak 3 buku untuk mahasiswa S1, 5 buku untuk mahasiswa S2 dan S3.', ''),
+(2, 'Tata Cara Pengembalian Koleksi Buku', '1. Mengembalikan buku yang sudah dipinjam melalui alat sort assistant yang berada di meja sirkulasi.\r\n\r\n2. Memperlihatkan Kartu Tanda Anggota Perpustakaan kepada petugas untuk diperiksa.\r\n\r\n3. Apabila terlambat mengembalikan buku maka mahasiswa wajib membayar denda Rp. 500 perhari persatu buku yang dipinjam. ', ''),
+(3, 'Tata Cara Perpanjangan Buku yang telah dipinjam', '1. Mengembalikan buku yang sudah dipinjam melalui alat sort assistant yang berada di meja sirkulasi.\r\n\r\n2. Memperlihatkan Kartu Tanda Anggota Perpustakaan kepada petugas untuk diperiksa.\r\n\r\n3. Apabila terlambat mengembalikan buku maka mahasiswa wajib membayar denda Rp. 500 perhari persatu buku yang dipinjam.\r\n\r\n4. Melakukan peminjaman kembali secara mandiri dengan alat peminjaman yang berada di depan meja sirkulasi dengan batas waktu pengembalian selama 7 hari.', '');
 
 -- --------------------------------------------------------
 

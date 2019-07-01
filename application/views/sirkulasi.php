@@ -36,10 +36,6 @@ include "head.php";
 							<div class="panel">
 								<div class="panel-heading">
 									<h3 class="panel-title"><b>Tata Cara Peminjaman Koleksi Buku</b></h3>
-									<div class="right">
-										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
-										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
-									</div>
 								</div>
 								<div class="panel-body">
 									
@@ -64,10 +60,6 @@ include "head.php";
 							<div class="panel">
 								<div class="panel-heading">
 									<h3 class="panel-title"><b>Tata Cara Pengembalian Koleksi Buku</b></h3>
-									<div class="right">
-										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
-										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
-									</div>
 								</div>
 								<div class="panel-body">
 									<p>1. Mengembalikan buku yang sudah dipinjam melalui alat <i>sort assistant</i> yang berada di meja sirkulasi.</p>
@@ -90,10 +82,6 @@ include "head.php";
 							<div class="panel">
 								<div class="panel-heading">
 									<h3 class="panel-title"><b>Tata Cara Perpanjangan Buku yang telah dipinjam</b></h3>
-									<div class="right">
-										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
-										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
-									</div>
 								</div>
 								<div class="panel-body">
 									<p>1. Mengembalikan buku yang sudah dipinjam melalui alat <i>sort assistant</i> yang berada di meja sirkulasi.</p>
