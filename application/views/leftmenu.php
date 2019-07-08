@@ -62,6 +62,7 @@
 								<ul class="nav">
 									<li><a <?php if($halaman == "cpanellayananpemustaka") echo "class='active'"; ?> href="<?php echo base_url(); ?>admin/cpanellayananpemustaka">Layanan Pemustaka</a></li>
 									<li><a href="<?php echo base_url(); ?>admin/pembuatankta" class="">Profil Perpustakaan</a></li>
+									<li><a href="<?php echo base_url(); ?>login/logout">Logout</a></li>
 								</ul>
 							</div>
 
